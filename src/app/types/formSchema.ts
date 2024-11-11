@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const formSchema = z.object({
-  id: z.string().max(9, "The ID number must be a maximum of 9 characters"),
+  id: z.string().min(9, "The ID number must be at least of 9 characters"),
   firstName: z.string().min(2, "name must be at least 2 characters"),
   lastName: z.string().min(2, "name must be at least 2 characters"),
   birthDate: z.date().refine((date) => date <= new Date(), {
