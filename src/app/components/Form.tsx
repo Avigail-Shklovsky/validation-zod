@@ -36,7 +36,7 @@ export default function FormPage() {
         lastName: "",
         birthDate: new Date(),
         email: "",
-      }); // Clear form after successful submission
+      }); 
       console.log("Form data:", result.data);
     } else {
       const errors = result.error.flatten().fieldErrors;
